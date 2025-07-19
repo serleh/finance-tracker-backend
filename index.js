@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 const connectDB = require("./config/database");
 connectDB();
 
+app.use(express.json());
 app.use("/", homeRoute);
 
 app.listen(PORT, () => {
